@@ -1,0 +1,27 @@
+<HTML>
+    <HEAD><TITLE>Ангел и Земля</TITLE></HEAD>
+    <BODY>
+    <CENTER>
+    <IMG SRC="angel.gif" ALT="Ангел" WIDTH=100 HEIGHT=100 STYLE="position:absolute; left:0px; top:50%;">
+    <IMG SRC="earth.gif" ALT="Земля" WIDTH=100 HEIGHT=100 STYLE="position:absolute; left:50%; top:0px;">
+    </CENTER>
+    <SCRIPT>
+        function moveImages() {
+            var angel = document.getElementsByTagName('IMG')[0];
+            var earth = document.getElementsByTagName('IMG')[1];
+            var angelPos = 0;
+            var earthPos = 0;
+            setInterval(function() {
+                angelPos += 2;
+                earthPos += 2;
+                if (angelPos > window.innerWidth - 100) angelPos = 0;
+                if (earthPos > window.innerHeight - 100) earthPos = 0;
+                angel.style.left = angelPos + 'px';
+                earth.style.top = earthPos + 'px';
+            }, 20);
+        }
+        moveImages();
+    </SCRIPT>
+    </BODY>
+    </HTML>
+    
