@@ -9,9 +9,10 @@ class Graph {
     }
 
     createNode(vertexSet) {
+        vertexSet = new Set(vertexSet)
         const vertexCount = vertexSet.length;
-        console.log(vertexSet);
         this.nodes.push([])
+        console.log(vertexSet);
         if (vertexSet) {
             for(let i=0; i<vertexSet.length; i++){
                 
@@ -24,4 +25,4 @@ class Graph {
 }
 
 const grp = new Graph()
-grp.createNode((1,2,3))
+grp.createNode([1,2,3,3])
